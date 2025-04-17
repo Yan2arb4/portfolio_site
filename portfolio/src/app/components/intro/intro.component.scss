@@ -1,0 +1,35 @@
+@import "../../../styles.scss";
+
+section {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    color: $white;
+    letter-spacing: 5px;
+  
+    .name {
+      font-size: 4rem;
+  
+      b {
+        color: $cmd-blue;
+        font-weight: 800;
+      }
+    }
+  
+    .description {
+      font-size: 2.5rem;
+    }
+
+    .btn-explore {
+        font-size: 1.5rem;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $cmd-blue;
+        padding: 0.8rem 6rem;
+    }
+  }
