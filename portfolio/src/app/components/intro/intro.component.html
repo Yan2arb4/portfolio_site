@@ -1,10 +1,10 @@
 <app-canvas-dots></app-canvas-dots>
 <section>
-    <p class="name">
+    <p class="name" [@fadeInBottomLeft]="ng_fadeInBottomLeft">
         Hi, I'm <b>Yanéric</b>.
     </p>
-    <p class="description">
+    <p class="description" [@fadeInBottomRight]="ng_fadeInBottomRight">
         I am a Computer Science (CS) student.
     </p>
-    <button class="btn-explore">Explore the rest</button>
+    <button class="btn-explore" [@fadeInBottom]="ng_fadeInBottom">Explore the rest</button>
 </section>
