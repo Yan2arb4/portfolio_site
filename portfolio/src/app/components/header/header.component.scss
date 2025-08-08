@@ -10,10 +10,15 @@ header {
     align-items: center;
     justify-content: space-evenly;
     color: $white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.2); /* Black background with 50% opacity */
     border-radius: 15px;
 
-    p {
-        opacity: 1;
+    .option:hover {
+        color: $cmd-blue;
+        transition: ease-in 0.2s;
+    }
+
+    .option {
+        transition: ease-out 0.2s;
     }
 }

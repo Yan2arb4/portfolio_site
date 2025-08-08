@@ -7,13 +7,17 @@ import { IntroComponent } from './components/intro/intro.component';
 import { CanvasDotsComponent } from './components/canvas/canvas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
     CanvasDotsComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutMeComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

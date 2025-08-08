@@ -1,12 +1,6 @@
 @import "../../../styles.scss";
 
-app-header {
-  position: fixed;
-  left: 35%;
-  top: 1%;
-}
-
-section {
+.intro {
   z-index: 1;
   height: 100vh;
   display: flex;
