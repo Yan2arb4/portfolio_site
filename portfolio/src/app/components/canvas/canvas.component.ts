@@ -8,7 +8,7 @@ import {
 
 @Component({
   selector: 'app-canvas-dots',
-  templateUrl: './canvas.component.html',
+  template: `<canvas #canvas></canvas>`,
   styleUrls: ['./canvas.component.scss'],
 })
 export class CanvasDotsComponent implements AfterViewInit {
@@ -28,12 +28,13 @@ export class CanvasDotsComponent implements AfterViewInit {
 
   @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    this.mousePosition.x = event.pageX;
-    this.mousePosition.y = event.pageY;
+    const rect = this.canvasRef.nativeElement.getBoundingClientRect();
+    this.mousePosition.x = event.clientX - rect.left;
+    this.mousePosition.y = event.clientY - rect.top;
 
     if (this.dots.array[0]) {
-      this.dots.array[0].x = event.pageX;
-      this.dots.array[0].y = event.pageY;
+      this.dots.array[0].x = this.mousePosition.x;
+      this.dots.array[0].y = this.mousePosition.y;
     }
   }
 
@@ -47,16 +48,21 @@ export class CanvasDotsComponent implements AfterViewInit {
 
   private setupCanvas(): void {
     const canvas = this.canvasRef.nativeElement;
-    canvas.width = document.body.scrollWidth;
-    canvas.height = window.innerHeight;
+    const parent = this.canvasRef.nativeElement.parentElement as HTMLElement;
+
+    const rect = parent.getBoundingClientRect(); // measure <app-intro> or <section.intro>
+
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+
     this.ctx = canvas.getContext('2d')!;
     this.ctx.lineWidth = 0.3;
-    //this.ctx.strokeStyle = 'rgb(22, 198, 12)';
     this.ctx.strokeStyle = 'rgb(159, 48, 224)';
   }
 
+
   private initializeDots(): void {
-    const width = window.innerWidth;
+    const width = this.canvasRef.nativeElement.width;
     this.dots = {
       nb: width > 1600 ? 600 :
           width > 1300 ? 575 :
@@ -83,13 +89,11 @@ export class CanvasDotsComponent implements AfterViewInit {
     return {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      //bidirectional random movement pattern
       vx: (Math.random() * 2 - 1) * speedFactor,
       vy: (Math.random() * 2 - 1) * speedFactor,
       radius: Math.random() * 1.5,
       colour: this.colorDot[Math.floor(Math.random() * this.colorDot.length)],
     };
-    
   }
 
   private drawDots() {
@@ -100,7 +104,7 @@ export class CanvasDotsComponent implements AfterViewInit {
 
     for (const dot of this.dots.array) {
       const distance = Math.hypot(dot.x - this.mousePosition.x, dot.y - this.mousePosition.y);
-      const distanceRatio = distance / (window.innerWidth / 1.7);
+      const distanceRatio = distance / (canvas.width / 1.7);
       ctx.beginPath();
       ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
       ctx.fillStyle = dot.colour.slice(0, -1) + `,${1 - distanceRatio})`;
@@ -142,7 +146,6 @@ export class CanvasDotsComponent implements AfterViewInit {
           ctx.beginPath();
           ctx.moveTo(d1.x, d1.y);
           ctx.lineTo(d2.x, d2.y);
-          //ctx.strokeStyle = `rgba(22, 198, 12, ${1 - ratio})`;
           ctx.strokeStyle = `rgba(159, 48, 224, ${1 - ratio})`;
           ctx.stroke();
           ctx.closePath();
