@@ -9,4 +9,5 @@ import { CommonModule } from '@angular/common';
 export class LanguageComponent {
   @Input() reference!: string;
   @Input() color!: string;
+  @Input() name!: string;
 }
