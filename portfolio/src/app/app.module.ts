@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { MainComponent } from './components/main/main.component';
+import { LanguageComponent } from './components/language/language.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MainComponent } from './components/main/main.component';
     CanvasDotsComponent,
     HeaderComponent,
     AboutMeComponent,
-    MainComponent
+    MainComponent,
+    LanguageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,8 @@
-<section>
-    <p>I very much exist now</p>
+<section class="about-me">
+    <div>
+        <p class="text skills">Skills</p>
+    </div>
+    <div class="languages">
+        <app-language *ngFor="let language of languages" [reference]="language.reference" [color]="language.color"></app-language>
+    </div>
 </section>

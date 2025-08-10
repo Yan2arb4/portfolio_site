@@ -1,6 +1,18 @@
 @import "../../../styles.scss";
 
-section{
+.about-me{
     height: 100vh;
-    background-color: off-dark;
+    background-color: $off-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .skills{
+        font-size: 4rem;
+    }
+
+    .text{
+        color: $white;
+    }
 }
