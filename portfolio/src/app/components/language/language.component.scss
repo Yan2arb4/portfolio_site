@@ -20,33 +20,28 @@
     .not-favorite-glow {
         animation: pulse-silver-blow 3s ease-in-out infinite;
     }
-
-    .figma-logo{
-        height: 4rem;
-        animation: drop-shadow(0 0 2px gold) drop-shadow(0 0 4px gold);
-    }
 } 
 
 @keyframes pulse-golden-blow {
   0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px gold;
+    text-shadow: 0 0 1px #fff, 0 0 4px gold;
   }
   50% {
-    text-shadow: 0 0 2px #fff, 0 0 4px gold, 0 0 6px gold;
+    text-shadow: 0 0 4px #fff, 0 0 6px gold, 0 0 8px gold;
   }
   100% {
-    text-shadow: 0 0 1px #fff, 0 0 2px gold;
+    text-shadow: 0 0 1px #fff, 0 0 4px gold;
   }
 }
 
 @keyframes pulse-silver-blow {
   0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px silver;
+    text-shadow: 0 0 1px #fff, 0 0 4px silver;
   }
   50% {
-    text-shadow: 0 0 2px #fff, 0 0 4px silver, 0 0 6px silver;
+    text-shadow: 0 0 4px #fff, 0 0 6px silver, 0 0 8px silver;
   }
   100% {
-    text-shadow: 0 0 1px #fff, 0 0 2px silver;
+    text-shadow: 0 0 1px #fff, 0 0 4px silver;
   }
 }
