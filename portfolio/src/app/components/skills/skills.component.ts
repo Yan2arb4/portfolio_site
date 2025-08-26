@@ -33,17 +33,3 @@ export class SkillsComponent {
 /* use image tag for figma since multiple colors
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
  */         
-
-class language {
-  reference: string;
-  color: string;
-  name: string;
-  favorite: boolean;
-
-  constructor(languageReference: string, languageColor: string, languageName : string, languageFavorite : boolean){
-    this.reference = languageReference;
-    this.color = languageColor;
-    this.name = languageName;
-    this.favorite = languageFavorite;
-  }
-}
