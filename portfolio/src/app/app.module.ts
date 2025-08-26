@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { LanguageComponent } from './components/language/language.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SkillsComponent } from './components/skills/skills.component';
     HeaderComponent,
     MainComponent,
     LanguageComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProjectsComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
