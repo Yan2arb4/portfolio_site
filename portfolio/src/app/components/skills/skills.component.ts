@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss']
 })
-export class AboutMeComponent {
+export class SkillsComponent {
   languages: language[] = [
     new language('devicon-angularjs-plain colored', '#c4473a', 'AngularJS', true),
     new language('devicon-azuredevops-plain colored', '#0078d4', 'Azure DevOps', false),
