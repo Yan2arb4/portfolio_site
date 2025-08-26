@@ -10,7 +10,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { MainComponent } from './components/main/main.component';
 import { LanguageComponent } from './components/language/language.component';
-import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { TestComponent } from './components/test/test.component';
     HeaderComponent,
     AboutMeComponent,
     MainComponent,
-    LanguageComponent,
-    TestComponent
+    LanguageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+$off-dark: #262626;
+$off-super-dark: #141313;
+$white: #ffffff;
+$cmd-blue: #3B78FF;
+$yummy-purple: #6E1E9D;
+$yummy-dark-purple: #350f4b;
+$cmd-green: #16C60C;
+
 @font-face {
     font-family: Roboto;
     src: url(assets/fonts/Roboto-VariableFont_wdth_wght.ttf) format('truetype');
@@ -14,9 +22,12 @@ body {
     font-family: Roboto;
 }
 
-$off-dark: #262626;
-$off-super-dark: #141313;
-$white: #ffffff;
-$cmd-blue: #3B78FF;
-$yummy-purple: #6E1E9D;
-$cmd-green: #16C60C;
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: $off-super-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $yummy-dark-purple;
+  height: 10px;
+}
