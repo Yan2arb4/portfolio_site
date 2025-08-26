@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { language } from 'src/app/models/language';
 
 @Component({
   selector: 'app-skills',

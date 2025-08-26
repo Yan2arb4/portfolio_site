@@ -1,4 +1,4 @@
-class language {
+export class language {
   reference: string;
   color: string;
   name: string;

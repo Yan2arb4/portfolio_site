@@ -1,16 +1,16 @@
-class projectCard {
+export class projectCard {
   title: string;
   ongoing: boolean;
   description: string;
-  keyLanguages: string[];
+  skills: string[];
   githubLink: string;
   imageLink: string;
 
-  constructor(title: string, ongoing: boolean, description: string, keyLanguages: string[], githubLink: string, imageLink: string) {
+  constructor(title: string, ongoing: boolean, description: string, skills: string[], githubLink: string, imageLink: string) {
     this.title = title;
     this.ongoing = ongoing;
     this.description = description;
-    this.keyLanguages = keyLanguages;
+    this.skills = skills;
     this.githubLink = githubLink;
     this.imageLink = imageLink;
   }
