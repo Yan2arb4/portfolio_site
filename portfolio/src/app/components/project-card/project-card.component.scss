@@ -1,0 +1,35 @@
+@import "../../../styles.scss";
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+
+    .card{
+        background-color: $off-super-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 5%;
+
+        .project-img{
+            height: 400px;
+            width: 400px;
+            border-radius: 5%;
+            border: 10px solid $yummy-dark-purple;
+    }
+    }
+
+    .text-box{
+        width: 30%;
+        color: $white;
+        line-height: 40px;
+
+        p{
+            text-align: justify;
+            font-size: 1.3rem;
+        }
+    }
+}

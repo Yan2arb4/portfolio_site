@@ -11,7 +11,7 @@ export class ProjectsComponent {
     new projectCard(
       'Discord Bot',
       true,
-      'A discord bot that provides various functionalities such as minecraft server management, various commands calling APIs, and more.',
+      'A discord bot made with Javascript that is self-hosted on a personal server running on Ubuntu. The discord bot provides many functionalities such as various commands calling APIs, sleep tracking with the utilization of MongoDB to handle the data. Utilizing MySQL, it also holds basic information  of each member who interacts with it, allowing custom services such as minecraft server management and the ability to set reminders or recurring events to the individual in question.',
       ['JavaScript', 'MySQL', 'Node.js', 'Discord.js', 'Ubuntu'],
       'no_link_for_now',
       'https://placebear.com/500/500'
