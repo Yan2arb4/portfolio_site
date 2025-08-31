@@ -20,16 +20,16 @@ export class ProjectsComponent {
     new projectCard(
       'Hearthstone like Card Game',
       false,
-      'A digital card game inspired by Hearthstone, featuring strategic gameplay, deck building, currency system, and more.',
-      getLanguagesByNames(['Angular', 'TypeScript', 'Asp.Net Core', 'C#', 'Entity Framework', 'SQL Server', 'Azure DevOps']),
+      'A digital card game inspired by Hearthstone, built with Angular (client) and ASP.NET Core with SQL Server (backend). Features include strategic gameplay, deck building, a currency system, Elo ranking, and more fun things! Real-time functionality is powered by SignalR over WebSockets. Developed in a team of four using Scrum methodology and managed with Azure DevOps',
+      getLanguagesByNames(['AngularJS', 'TypeScript', 'Asp.Net Core', 'C#', 'Entity Framework', 'SQL Server', 'Azure DevOps']),
       'no_link_for_now',
       'https://placebear.com/500/500'
     ),
     new projectCard(
       'Portfolio Website',
       true,
-      'A personal portfolio website to showcase my skills and projects, built with Angular and hosted on GitHub Pages.',
-      getLanguagesByNames(['Angular', 'TypeScript', 'SCSS', 'HTML5']),
+      'A personal portfolio website built with AngularTS and self-hosted on a personal domain, featuring reusable child components, structured models, and UI libraries for a clean and interactive user experience.',
+      getLanguagesByNames(['AngularJS', 'TypeScript', 'HTML5', 'SCSS', 'Ubuntu']),
       'balls',
       'https://placebear.com/500/500'
     )
