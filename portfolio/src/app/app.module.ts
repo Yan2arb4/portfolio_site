@@ -12,6 +12,7 @@ import { LanguageComponent } from './components/language/language.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     LanguageComponent,
     SkillsComponent,
     ProjectsComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

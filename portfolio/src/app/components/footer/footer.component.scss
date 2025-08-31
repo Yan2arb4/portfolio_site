@@ -1,0 +1,41 @@
+@import "../../../styles.scss";
+
+.footer-container{
+    background-color: $off-super-dark;   
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 20px;
+    height: 150px;
+
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        .vertical-bar{
+            height: 50px;
+            width: 2px;
+            background-color: $white;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 2rem;
+            display: flex;
+        }
+
+        .logo{
+            color: white;
+            transition: ease-in 0.1s;
+        }
+
+        .logo:hover{
+            color: $cmd-blue;
+            transition: ease-in 0.1s;
+        }
+    }
+}
