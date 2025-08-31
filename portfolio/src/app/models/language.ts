@@ -25,3 +25,16 @@ export const languagesSetList: language[] = [
     new language('devicon-typescript-plain colored', '#007acc', 'TypeScript', true),
     new language('devicon-ubuntu-plain colored', '#E95420', 'Ubuntu', true),
 ];
+
+
+export function getLanguagesByNames(names: string[]): language[] {
+  const matchedLanguages: language[] = [];
+
+  for (const name of names) {
+    const match = languagesSetList.find(lang => lang.name.toLowerCase() === name.toLowerCase());
+    if (match) {
+      matchedLanguages.push(match);
+    }
+  }
+  return matchedLanguages;
+}
