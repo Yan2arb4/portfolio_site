@@ -1,8 +1,14 @@
 <div class="project-container">
-    <div class="card">
-        <img class="project-img" [src]="project.imageLink"/>
-    </div>
-    <div class="text-box">
-        <p>{{project.description}}</p>
+    <p>{{project.title}}</p>
+    <div class="card-wrapper">
+        <div class="card">
+            <img class="project-img" [src]="project.imageLink"/>
+        </div>
+        <div class="text-box">
+            <p>{{project.description}}</p>
+            <div class="skills-display">
+                <app-language *ngFor="let language of project.skills" [reference]="language.reference" [color]="language.color" [name]="language.name" [favorite]="language.favorite"></app-language>
+            </div>
+        </div>
     </div>
 </div>

@@ -2,15 +2,22 @@
 
 .project-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 5%;
+    gap: 20px;
+
+    .card-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
 
     .card{
         background-color: $off-super-dark;
         display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 20px;
         border-radius: 5%;
 
@@ -19,17 +26,27 @@
             width: 400px;
             border-radius: 5%;
             border: 10px solid $yummy-dark-purple;
-    }
+        }
     }
 
     .text-box{
         width: 30%;
         color: $white;
         line-height: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
 
         p{
             text-align: justify;
             font-size: 1.3rem;
+        }
+
+        .skills-display{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
         }
     }
 }
