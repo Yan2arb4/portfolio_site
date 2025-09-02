@@ -18,7 +18,7 @@ export class ProjectsComponent {
       '../assets/images/project_bot.png'
     ),
     new projectCard(
-      'Hearthstone like Card Game',
+      'Super Cartes Infinies',
       false,
       'A digital card game inspired by Hearthstone, built with Angular (client) and ASP.NET Core with SQL Server (backend). Features include strategic gameplay, deck building, a currency system, Elo ranking, and more fun things! Real-time functionality is powered by SignalR over WebSockets. Developed in a team of four using Scrum methodology and managed with Azure DevOps',
       getLanguagesByNames(['AngularJS', 'TypeScript', 'Asp.Net Core', 'C#', 'Entity Framework', 'SQL Server', 'Azure DevOps']),
@@ -30,7 +30,7 @@ export class ProjectsComponent {
       true,
       'A personal portfolio website built with AngularTS and self-hosted on a personal domain, featuring reusable child components, structured models, and UI libraries for a clean and interactive user experience.',
       getLanguagesByNames(['AngularJS', 'TypeScript', 'HTML5', 'SCSS', 'Ubuntu']),
-      'https://github.com/Yan2arb4/portfolio_site.git',
+      'https://github.com/Yan2arb4/portfolio_site',
       '../assets/images/project_portfolio.png'
     )
   ]

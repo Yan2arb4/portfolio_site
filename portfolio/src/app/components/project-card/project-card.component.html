@@ -7,7 +7,8 @@
             class="github-button" 
             [class.no-link]="project.githubLink === ''" 
             [class.has-link]="project.githubLink !== ''"
-            [disabled]="project.githubLink === ''">
+            [disabled]="project.githubLink === ''"
+            (click)="checkProject()">
 
                 <i class="devicon-github-original github"></i>
                 <span *ngIf="project.githubLink === ''" class="tooltip">

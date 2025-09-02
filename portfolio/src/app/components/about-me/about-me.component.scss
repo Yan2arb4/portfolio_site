@@ -1,0 +1,28 @@
+@import "../../../styles.scss";
+
+.about-me{
+    height: 100vh;
+    background-color: $off-dark;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    .image-part{
+        .image{
+            height: 420px;
+        }
+    }
+
+    .description{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 25%;
+        .info{
+            line-height: 40px;
+            text-align: justify;
+        }
+    }
+}

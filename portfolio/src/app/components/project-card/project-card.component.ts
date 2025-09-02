@@ -8,4 +8,8 @@ import { projectCard } from 'src/app/models/projectCard';
 })
 export class ProjectCardComponent {
 @Input() project!: projectCard;
+
+  checkProject(): void {
+    window.open(this.project.githubLink, "_blank");
+  }
 }
