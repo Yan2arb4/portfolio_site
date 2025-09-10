@@ -39,4 +39,11 @@ export class IntroComponent implements OnInit {
     this.ng_fadeInBottomRight!;
     this.ng_fadeInBottom!;
   }
+
+  scrollToTarget() {
+    const element = document.getElementById('skills');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
