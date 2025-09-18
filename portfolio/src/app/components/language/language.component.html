@@ -2,4 +2,7 @@
     *ngIf="color != 'multicolor'" 
     [ngStyle]="{'border-color': color,'box-shadow': 'inset 0 0 5px ' + color}">
     <i [class]="reference" class="logo" [ngClass]="{'favorite-glow': favorite, 'not-favorite-glow': favorite == false}"></i>
+    <div class="language-name">
+        <p>{{name}}</p>
+    </div>
 </div>

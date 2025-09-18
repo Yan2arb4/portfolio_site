@@ -4,10 +4,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     
     border: 1px solid;
     border-radius: 20%;
     padding: 10px;
+
+    .language-name{
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      white-space: nowrap;
+      padding: 15px;
+      background-color: $off-super-dark;
+      border-radius: 15px;
+      
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $white;
+      top: -50%;
+
+      transition: opacity 0.2s ease-in;
+    }
+
+    &:hover .language-name {
+      opacity: 0.8;     
+      visibility: visible;
+    }
 
     .logo{
         font-size: 4rem;
