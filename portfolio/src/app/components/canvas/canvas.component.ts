@@ -19,11 +19,33 @@ export class CanvasDotsComponent implements AfterViewInit {
   private mousePosition = { x: 0, y: 0 };
   private colorDot = Array(4).fill('rgb(110, 30, 157)').concat(['rgb(59, 120, 255)']);
   private animationId!: number;
+  private isMobile: boolean = false;
 
   ngAfterViewInit(): void {
+    this.isMobile = this.isMobileDevice();
     this.setupCanvas();
     this.initializeDots();
     this.animate();
+  }
+
+  isMobileDevice(): boolean {
+    let userAgent = navigator.userAgent;
+
+    let fruit = "apple";
+
+    const yumFruit = /banana|apple|orange|kiwi|mango|grape|peach|pear|plum|cherry|berry/i.test(fruit);
+    console.log("Yum fruit: " + yumFruit);
+
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS|macintosh/i.test(userAgent)){
+      console.log("Mobile device detected");
+      console.log(userAgent);
+      return true;
+    }
+    else{
+      console.log("Not a mobile device");
+      console.log(userAgent);
+      return false;
+    }
   }
 
   @HostListener('window:mousemove', ['$event'])
@@ -64,11 +86,11 @@ export class CanvasDotsComponent implements AfterViewInit {
   private initializeDots(): void {
     const width = this.canvasRef.nativeElement.width;
     this.dots = {
-      nb: width > 1600 ? 600 :
-          width > 1300 ? 575 :
+      nb: width > 1600 ? 1000 :
+          width > 1300 ? 175 :
           width > 1100 ? 500 :
           width > 800 ? 300 :
-          width > 600 ? 200 : 100,
+          width > 600 ? 400 : 600,
       distance: width > 1100 ? 55 : 0,
       d_radius: width > 1100 ? 250 : 0,
       array: [],

@@ -1,6 +1,9 @@
 @import "../../../styles.scss";
 
 .intro {
+
+  // Responsive styles for smaller screens
+
   position: relative;
   z-index: 1;
   height: 100vh;
@@ -8,15 +11,18 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 
   color: $white;
   letter-spacing: 5px;
 
+  /*
   app-header {
     top: 50%;
     left: 50%;
   }
-  
+  */
+
   .name {
     font-size: 4rem;
 
@@ -32,7 +38,7 @@
 
   .btn-explore {
     position: relative;
-    margin-top: 20px;
+    margin-top: 1.2rem;
     font-size: 1.5rem;
     color: $white;
     background: none;
@@ -57,4 +63,20 @@
     color: #fff;
   }
 
+  // Responsive styles for smaller screens
+  @media screen and (max-width: 768px) {
+    .name {
+      font-size: 3rem;
+    }
+    
+    .description {
+      font-size: 1.5rem;
+    }
+
+    .btn-explore {
+      font-size: 1.2rem;
+      padding: 0.6rem 4rem;
+    }
+    
+  }
 }
