@@ -8,11 +8,19 @@
     gap: 20px;
     margin-bottom: 120px;
 
-    .neon-title{
+    .title{
         font-size: 2rem;
-        color: #fff;
-        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
-        animation: glow 1.5s infinite alternate;
+        color: $cmd-blue;
+        font-weight: bold;
+        text-align: center;    
+    }
+
+    .title-container{
+        position: relative;
+        padding: 5px 120px;
+        background-color: $off-super-dark;
+        border-radius: 10px;  
+        border: 2px solid $cmd-blue; 
     }
 
     .card-wrapper{
@@ -125,17 +133,5 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-    }
-}
-
-/*
-Thanks to https://prismic.io/blog/css-text-animations for the animation
-*/
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
-    }
-    100% {
-        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
     }
 }
