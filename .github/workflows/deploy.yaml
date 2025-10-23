@@ -29,11 +29,6 @@ jobs:
       - name: Verify build output
         run: ls -l portfolio/dist/portfolio
 
-      - name: Move build output
-        run: |
-          mkdir deploy-temp
-          cp -r portfolio/dist/portfolio/* deploy-temp/
-
       - name: Deploy via SSH 
         uses: appleboy/scp-action@v1
         with:
@@ -41,6 +36,7 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           port: 2222
-          source: "deploy-temp/*"
+          working-directory: "portfolio/dist/portfolio"
+          source: "*"
           target: "/var/www/yaneric.porogoramer.com"
           overwrite: true
