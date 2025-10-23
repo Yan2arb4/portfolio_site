@@ -25,8 +25,12 @@ jobs:
         run: npm run build -- --configuration production
         working-directory: portfolio
 
+      
+      - name: Verify build output
+        run: ls -l portfolio/dist/portfolio
+
       - name: Deploy via SSH 
-        uses: appleboy/scp-action@v1
+        uses: appleboy/scp-action@v0.1.7     # Testing another version
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
