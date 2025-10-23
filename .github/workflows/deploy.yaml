@@ -36,6 +36,6 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           port: 2222
-          working-directory: "portfolio/dist/portfolio/*"
+          source: "portfolio/dist/portfolio/*"
           target: "/var/www/yaneric.porogoramer.com"
           overwrite: true
