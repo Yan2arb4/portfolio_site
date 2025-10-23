@@ -28,9 +28,9 @@ jobs:
       - name: Deploy via SSH 
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.DEV_DEPLOY_HOST }}
-          username: ${{ secrets.DEV_DEPLOY_USER }}
-          key: ${{ secrets.DEV_DEPLOY_KEY }}
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
           port: 2222
           source: "portfolio/dist/portfolio/*"
           target: "/var/www/yaneric.porogoramer.com"
