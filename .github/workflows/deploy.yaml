@@ -17,9 +17,6 @@ jobs:
         with:
           node-version: 22
 
-      - name: Build project
-        run: npm ci
-
       - name: Build Angular app
         run: npm run build -- --configuration production
 
