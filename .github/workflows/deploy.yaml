@@ -38,3 +38,5 @@ jobs:
           port: 2222
           source: "portfolio/dist/portfolio/*"
           target: "/var/www/yaneric.porogoramer.com"
+          rm: true
+          overwrite: true
