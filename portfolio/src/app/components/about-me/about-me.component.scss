@@ -1,0 +1,109 @@
+@import "../../../styles.scss";
+
+.about-me {
+  height: 100vh;
+  background-color: $off-dark;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  .image-part,
+  .description {
+    flex: 1;
+    max-width: 50%; 
+  }
+
+  .image-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      padding-left: 8rem;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+    .title-section {
+      position: relative;
+    }
+
+    .horizontal-line {
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background-color: $white;
+      top: 40%;
+      left: -60px;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: $cmd-blue;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .info-section {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      width: 60%;
+    }
+
+    .info {
+      line-height: 2.5rem;
+      font-size: 1.4rem;
+      text-align: justify;
+    }
+
+    .contact{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .button{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap:15px;
+      text-align: center;
+      white-space: nowrap; 
+      padding: 0.8rem 4rem;
+      border-radius: 5px;
+      color: $off-dark;
+      font-weight: 800;
+      background-color: $white;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+    }
+
+    .button:hover{
+      background-color: $yummy-purple;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0px 50px $yummy-dark-purple;
+    }
+
+    .logo {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

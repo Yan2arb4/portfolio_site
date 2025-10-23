@@ -1,0 +1,29 @@
+<div class="project-container">
+    <div class="title-container">
+        <p class="title">{{project.title}}</p>
+    </div>
+    <div class="card-wrapper">
+        <div class="card">
+            <img class="project-img" [src]="project.imageLink"/>
+            <button 
+            class="github-button" 
+            [class.no-link]="project.githubLink === ''" 
+            [class.has-link]="project.githubLink !== ''"
+            [disabled]="project.githubLink === ''"
+            (click)="checkProject()">
+
+                <i class="devicon-github-original github"></i>
+                <span *ngIf="project.githubLink === ''" class="tooltip">
+                    There are no link provided for this project but I will gladly show a live demo
+                </span>
+                
+            </button>
+        </div>
+        <div class="text-box">
+            <p>{{project.description}}</p>
+            <div class="skills-display">
+                <app-language *ngFor="let language of project.skills" [reference]="language.reference" [color]="language.color" [name]="language.name" [favorite]="language.favorite"></app-language>
+            </div>
+        </div>
+    </div>
+</div>

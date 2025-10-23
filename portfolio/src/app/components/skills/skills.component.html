@@ -1,0 +1,11 @@
+<section class="skills" id="skills">
+    <div class="text-container">
+        <div class="title-container">
+            <p class="title">Skills</p>
+            <span class="block"></span>
+        </div>
+    </div>
+    <div class="languages">
+        <app-language *ngFor="let language of languages" [reference]="language.reference" [color]="language.color" [name]="language.name" [favorite]="language.favorite"></app-language>
+    </div>
+</section>

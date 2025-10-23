@@ -1,0 +1,59 @@
+@import "../../../styles.scss";
+
+.skills{
+    height: 100vh;
+    background-color: $off-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-bottom: 40px;
+
+        .title-container{
+            position: relative;
+        }
+
+        .title{
+            position: relative;
+            color: $white;
+            font-size: 5rem;
+            font-weight: 800; 
+            letter-spacing: 4px;
+            z-index: 200;
+        }
+
+        .block{
+            position: absolute;
+            height: 2rem;
+            width: 14rem;
+            background-color: $yummy-purple;
+            right: -15%;
+            bottom: 10%;
+            z-index: 1;
+        }
+    }
+
+    .languages{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 60%;
+        gap: 2rem;
+    }
+
+    .skills{
+        font-size: 4rem;
+    }
+
+    .text{
+        color: $white;
+    }
+}
