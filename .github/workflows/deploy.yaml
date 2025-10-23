@@ -1,0 +1,41 @@
+name: Deploy portfolio website to server
+
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: portfolio
+        
+      - name: Use Node.js 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: Build Angular app
+        run: npm run build -- --configuration production
+        working-directory: portfolio
+
+      
+      - name: Verify build output
+        run: ls -l portfolio/dist/portfolio
+
+      - name: Deploy via SSH 
+        uses: appleboy/scp-action@v0.1.7     # Testing another version
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: 2222
+          working-directory: "portfolio/dist/portfolio/*"
+          target: "/var/www/yaneric.porogoramer.com"
+          overwrite: true
