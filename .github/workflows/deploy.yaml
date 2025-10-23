@@ -12,6 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: npm ci
+        working-directory: portfolio
+        
       - name: Use Node.js 
         uses: actions/setup-node@v3
         with:
@@ -19,6 +23,7 @@ jobs:
 
       - name: Build Angular app
         run: npm run build -- --configuration production
+        working-directory: portfolio
 
       - name: Deploy via SSH 
         uses: appleboy/ssh-action@v0.1.10
@@ -27,5 +32,5 @@ jobs:
           username: ${{ secrets.DEV_DEPLOY_USER }}
           key: ${{ secrets.DEV_DEPLOY_KEY }}
           port: 2222
-          source: "dist/portfolio/*"
+          source: "portfolio/dist/portfolio/*"
           target: "/var/www/yaneric.porogoramer.com"
