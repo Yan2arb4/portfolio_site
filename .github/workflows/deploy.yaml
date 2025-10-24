@@ -34,6 +34,16 @@ jobs:
           mkdir dist
           cp -r portfolio/dist/portfolio/* dist/
 
+      - name: Clean target directory
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: 2222
+          script: |
+            rm -rf /var/www/yaneric.porogoramer.com/*
+
       - name: Deploy via SSH 
         uses: appleboy/scp-action@v1
         with:
