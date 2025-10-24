@@ -43,4 +43,5 @@ jobs:
           port: 2222
           source: "dist/*"
           target: "/var/www/yaneric.porogoramer.com"
+          rm: true
           overwrite: true
