@@ -23,27 +23,28 @@ export class CanvasDotsComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.isMobile = this.isMobileDevice();
-    this.setupCanvas();
-    this.initializeDots();
-    this.animate();
+
+    /*
+    if(this.isMobile){
+      this.setupCanvas();
+      this.initializeDots();
+      this.animate();
+      return;
+    }else{
+      this.setupCanvas();
+      this.initializeDots();
+      this.animate();
+    }
+    */
   }
 
   isMobileDevice(): boolean {
     let userAgent = navigator.userAgent;
 
-    let fruit = "apple";
-
-    const yumFruit = /banana|apple|orange|kiwi|mango|grape|peach|pear|plum|cherry|berry/i.test(fruit);
-    console.log("Yum fruit: " + yumFruit);
-
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS|macintosh/i.test(userAgent)){
-      console.log("Mobile device detected");
-      console.log(userAgent);
       return true;
     }
     else{
-      console.log("Not a mobile device");
-      console.log(userAgent);
       return false;
     }
   }
