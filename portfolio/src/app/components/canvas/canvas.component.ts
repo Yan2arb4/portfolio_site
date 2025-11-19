@@ -22,7 +22,11 @@ export class CanvasDotsComponent implements AfterViewInit {
   private isMobile: boolean = false;
 
   ngAfterViewInit(): void {
-    this.isMobile = this.isMobileDevice();
+    //this.isMobile = this.isMobileDevice();
+
+    this.setupCanvas();
+    this.initializeDots();
+    this.animate();
 
     /*
     if(this.isMobile){

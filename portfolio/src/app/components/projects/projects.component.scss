@@ -40,3 +40,18 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .projects{
+        
+        .text-container{
+            .title {
+                font-size: 2.5rem;
+            }
+            .block {
+                height: 1.2rem;
+                width: 8rem;
+            }
+        }
+    }
+}
