@@ -41,7 +41,7 @@ export class IntroComponent implements OnInit {
   }
 
   scrollToTarget() {
-    const element = document.getElementById('skills');
+    const element = document.getElementById('projects');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
