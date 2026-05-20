@@ -1,11 +1,20 @@
 <section class="skills" id="skills">
-    <div class="text-container">
-        <div class="title-container">
-            <p class="title">Skills</p>
-            <span class="block"></span>
-        </div>
+  <div class="text-container">
+    <p class="title">Skills</p>
+  </div>
+  <div class="tech-section" *ngFor="let type of techTypes">
+    <p class="section-title">
+      {{ formatTechType(type) }}
+    </p>
+    <div class="tech-grid">
+      <span
+        class="tag"
+        *ngFor="let tech of getTechByType(type)"
+        [style.color]="tech.color"
+        style.border="1px solid {{ tech.color }}"
+        [style.background-color]="tech.color + '15'">
+        {{ tech.name }}
+      </span>
     </div>
-    <div class="languages">
-        <app-language *ngFor="let language of languages" [reference]="language.reference" [color]="language.color" [name]="language.name" [favorite]="language.favorite"></app-language>
-    </div>
+  </div>
 </section>

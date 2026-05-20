@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { tech, techSetList } from 'src/app/models/tech';
+import { techType } from 'src/app/models/techType';
 
 @Component({
   selector: 'app-skills',
@@ -7,5 +8,13 @@ import { tech, techSetList } from 'src/app/models/tech';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  languages : tech[] = techSetList;
+  techTypes = Object.values(techType);
+
+  getTechByType(type: techType): tech[] {
+    return techSetList.filter(t => t.type === type);
+  }
+
+  formatTechType(type: string): string {
+    return type.charAt(0).toUpperCase() + type.slice(1) + 's';
+  }
 }

@@ -1,78 +1,134 @@
 @import "../../../styles.scss";
 
-.skills{
-    height: 100vh;
-    background-color: $off-dark;
+.skills {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  background:
+    radial-gradient(circle at bottom left, rgba($cmd-blue, 0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba($cmd-green, 0.08), transparent 30%),
+    linear-gradient(
+      to bottom,
+      $off-dark 0%,
+      darken($off-dark, 3%) 100%
+    );
+
+  .text-container {
+    text-align: center;
+
+    .title {
+      color: $white;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+  }
+
+  .tech-section {
+    width: 60%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    gap: 1.2rem;
+  }
 
-    .text-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-        margin-bottom: 40px;
+  .section-title {
+    color: $light-gray;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: left;
+    width: 100%;
+  }
 
-        .title-container{
-            position: relative;
-        }
+  .tech-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
 
-        .title{
-            position: relative;
-            color: $white;
-            font-size: 5rem;
-            font-weight: 800; 
-            letter-spacing: 4px;
-            z-index: 200;
-        }
-
-        .block{
-            position: absolute;
-            height: 2rem;
-            width: 14rem;
-            background-color: $yummy-purple;
-            right: -15%;
-            bottom: 10%;
-            z-index: 1;
-        }
+    .tag {
+      font-size: 1.5rem;
+      padding: 5px;
+      border-radius: 5px;
+      filter: brightness(1.5);
     }
-
-    .languages{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        max-width: 60%;
-        gap: 2rem;
-    }
-
-    .text{
-        color: $white;
-    }
+  }
 }
 
-    // Responsive styles for smaller screens
-@media screen and (max-width: 768px) {
-    .skills{
-        height: auto;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-
-        .text-container{
-            .title {
-                font-size: 2.5rem;
-            }
-            .block {
-                height: 1.2rem;
-                width: 8rem;
-            }
-        }
-
-        .languages {
-            max-width: 100%;
-        }
+@media (max-width: 900px) {
+  .skills {
+    .tech-section {
+      width: 95%;
     }
+  }
 }
+
+// .skills{
+//     height: 100vh;
+//     background-color: $off-dark;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+
+//     .text-container {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 60%;
+//         margin-bottom: 40px;
+
+//         .title{
+//             color: $white;
+//             font-size: 3rem;
+//             font-weight: 900;
+//             letter-spacing: 3px;
+//             text-align: center;
+//             margin-bottom: 4rem;
+//         }
+//     }
+
+//     .languages{
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         max-width: 60%;
+//         gap: 2rem;
+//     }
+
+//     .text{
+//         color: $white;
+//     }
+// }
+
+//     // Responsive styles for smaller screens
+// @media screen and (max-width: 768px) {
+//     .skills{
+//         height: auto;
+//         padding-top: 4rem;
+//         padding-bottom: 4rem;
+
+//         .text-container{
+//             .title {
+//                 font-size: 2.5rem;
+//             }
+//             .block {
+//                 height: 1.2rem;
+//                 width: 8rem;
+//             }
+//         }
+
+//         .languages {
+//             max-width: 100%;
+//         }
+//     }
+// }
