@@ -24,6 +24,11 @@ export const languagesSetList: language[] = [
     new language('devicon-sass-plain colored', '#CD6799', 'SCSS', true),
     new language('devicon-typescript-plain colored', '#007acc', 'TypeScript', true),
     new language('devicon-ubuntu-plain colored', '#E95420', 'Ubuntu', true),
+    new language('devicon-react-plain colored', '#61DBFB', 'React', false),
+    new language('devicon-docker-plain colored', '#1D63ED', 'Docker', false),
+    new language('does-not-exist', '#D4AF37', '6502 assembly', false),
+    new language('does-not-exist', '#4b4b4b', 'W65C02 Microprocessor', false),
+    new language('does-not-exist', '#00A86B', 'Electronics', false),
 ];
 
 
