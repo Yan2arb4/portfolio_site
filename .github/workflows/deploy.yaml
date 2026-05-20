@@ -2,7 +2,7 @@ name: Deploy portfolio website to server
 
 on:
   push:
-    branches: [ main ]
+    branches: [ release ]
 
 jobs:
   deploy:
@@ -35,7 +35,7 @@ jobs:
           cp -r portfolio/dist/portfolio/* dist/
 
       - name: Clean target directory
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
