@@ -1,140 +1,152 @@
 @import "../../../styles.scss";
 
 .about-me {
-  height: 100vh;
-  background-color: $off-dark;
-  color: $white;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  gap: 2rem;
+  padding: 8rem 12% 8rem;
+  background:
+    radial-gradient(circle at top left, rgba($cmd-blue, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba($yummy-purple, 0.08), transparent 30%),
+    linear-gradient(
+      to top,
+      $off-dark 0%,
+      darken($off-dark, 3%) 100%
+    );
 
-  .image-part,
-  .description {
-    flex: 1;
-    max-width: 50%; 
-  }
-
-  .image-part {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .image {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-      padding-left: 8rem;
-    }
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-
-    .title-section {
-      position: relative;
-    }
-
-    .horizontal-line {
-      position: absolute;
-      width: 50px;
-      height: 2px;
-      background-color: $white;
-      top: 40%;
-      left: -60px;
-    }
-
-    .title {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: $cmd-blue;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-
-    .info-section {
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-      width: 60%;
-    }
-
-    .info {
-      line-height: 2.5rem;
-      font-size: 1.4rem;
-      text-align: justify;
-    }
-
-    .contact{
-        width: 60%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .button{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap:15px;
-      text-align: center;
-      white-space: nowrap; 
-      padding: 0.8rem 4rem;
-      border-radius: 5px;
-      color: $off-dark;
-      font-weight: 800;
-      background-color: $white;
-      transition: all 0.3s ease-in-out;
-      text-decoration: none;
-    }
-
-    .button:hover{
-      background-color: $yummy-purple;
-      color: $white;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 0px 50px $yummy-dark-purple;
-    }
-
-    .logo {
-      font-size: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+  color: $white;
 }
 
-@media screen and (max-width: 768px) {
+.image-part {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow:
+    0 0 40px rgba($cmd-blue, 0.15),
+    0 0 80px rgba($yummy-purple, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: translateY(-6px);
+}
+
+.description {
+  flex: 1;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-section {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.horizontal-line {
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: $cmd-blue;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title {
+  color: $cmd-blue;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.info-section {
+  margin-bottom: 3rem;
+}
+
+.info {
+  color: $light-gray;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  text-align: justify;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background-color: $white;
+  color: $off-dark;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button:hover {
+  background-color: $yummy-purple;
+  color: $white;
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 25px rgba($yummy-purple, 0.45);
+}
+
+.logo {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1000px) {
   .about-me {
     flex-direction: column;
-
-    .image-part,
-    .description {
-      max-width: 100%;
-    }
-
-    .image-part {
-      padding: 0;
-      margin-bottom: 2rem;
-
-      .image {
-        padding-left: 0;
-        width: 80%;
-      }
-    }
-
-    .description {
-      padding: 1rem;
-
-      .info-section,
-      .contact {
-        width: 100%;
-      }
-    }
+    text-align: center;
+    gap: 4rem;
+    padding: 100px 24px;
   }
-  
+
+  .description {
+    align-items: center;
+  }
+
+  .horizontal-line {
+    display: none;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .info {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  .image {
+    max-width: 400px;
+  }
 }
