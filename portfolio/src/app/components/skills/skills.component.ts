@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { language, languagesSetList } from 'src/app/models/language';
+import { tech, techSetList } from 'src/app/models/tech';
+import { techType } from 'src/app/models/techType';
 
 @Component({
   selector: 'app-skills',
@@ -7,9 +8,13 @@ import { language, languagesSetList } from 'src/app/models/language';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  languages : language[] = languagesSetList;
-}
+  techTypes = Object.values(techType);
 
-/* use image tag for figma since multiple colors
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
- */         
+  getTechByType(type: techType): tech[] {
+    return techSetList.filter(t => t.type === type);
+  }
+
+  formatTechType(type: string): string {
+    return type.charAt(0).toUpperCase() + type.slice(1) + 's';
+  }
+}
