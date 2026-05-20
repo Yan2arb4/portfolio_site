@@ -1,42 +1,128 @@
 @import "../../../styles.scss";
 
-.projects{
-    display: flex;
-    background-color: $off-dark;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    flex-direction: column;
-    gap: 80px;
+.projects {
+  position: relative;
+  overflow: hidden;
+  background-color: $off-dark;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
 
-    .text-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-        margin-top: 10%;
+  background:
+    radial-gradient(circle at top left, rgba($cmd-blue, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba($cmd-green, 0.08), transparent 30%),
+    linear-gradient(
+      to top,
+      $off-dark 0%,
+      darken($off-dark, 3%) 100%
+  );
 
-        .title-container{
-            position: relative;
-        }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
 
-        .title{
-            position: relative;
-            color: $white;
-            font-size: 5rem;
-            font-weight: 800; 
-            letter-spacing: 2px;
-            z-index: 200;
-        }
+  gap: 70px;
 
-        .block{
-            position: absolute;
-            height: 2rem;
-            width: 20rem;
-            background-color: $yummy-purple;
-            right: -15%;
-            bottom: 10%;
-            z-index: 1;
-        }
+  .project-section-title {
+    color: $white;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  .projects-grid {
+    width: 100%;
+    max-width: 1500px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Tablet/mobile */
+@media (max-width: 1300px) {
+  .projects {
+    .projects-grid {
+      grid-template-columns: 1fr;
     }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: $off-super-dark;
+  color: $white;
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  border-top: 2px solid $cmd-blue;
+
+  .seletected-project-image {
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: $light-gray;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+
+    .tag {
+      font-size: 1.2rem;
+      padding: 5px;
+      border-radius: 5px;
+      filter: brightness(2);
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    color: $cmd-blue;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: $light-gray;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  &:hover { color: $white; }
 }

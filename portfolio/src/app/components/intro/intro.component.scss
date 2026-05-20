@@ -12,6 +12,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  gap: 10px;
 
   color: $white;
   letter-spacing: 5px;
@@ -25,30 +26,38 @@
 
   .name {
     font-size: 4rem;
-
-    b {
-      color: $cmd-blue;
-      font-weight: 800;
-    }
   }
   
   .description {
     font-size: 2.5rem;
   }
 
-  .btn-explore {
-    position: relative;
-    margin-top: 1.2rem;
-    font-size: 1.5rem;
-    color: $white;
-    background: none;
-    background-color: transparent;
-    border: 1px solid $cmd-blue;
-    padding: 0.8rem 6rem;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  .more-description {
+    font-size: 1.8rem;
   }
+
+  b {
+    color: $cmd-blue;
+    font-weight: 800;
+  }
+
+.btn-explore {
+  position: relative;
+  margin-top: 1.2rem;
+  font-size: 1.5rem;
+  color: $white;
+  background: transparent;
+  border: 1px solid $cmd-blue;
+  padding: 0.8rem 6rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  min-height: 44px; // better mobile tap target
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
   .liquid {
     background: linear-gradient(#646cff 0 0) no-repeat calc(200% - var(--p, 0%))
@@ -62,21 +71,27 @@
     --t: 0.3s;
     color: #fff;
   }
+}
 
-  // Responsive styles for smaller screens
-  @media screen and (max-width: 768px) {
+// Responsive styles for smaller screens
+@media screen and (max-width: 768px) {
+  .intro{
     .name {
-      font-size: 3rem;
+      font-size: 2.2rem;
     }
     
     .description {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .more-description {
+      font-size: 1.1rem;
     }
 
     .btn-explore {
+      width: 80%;
       font-size: 1.2rem;
       padding: 0.6rem 4rem;
     }
-    
-  }
+  }  
 }

@@ -49,11 +49,30 @@
         gap: 2rem;
     }
 
-    .skills{
-        font-size: 4rem;
-    }
-
     .text{
         color: $white;
+    }
+}
+
+    // Responsive styles for smaller screens
+@media screen and (max-width: 768px) {
+    .skills{
+        height: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        .text-container{
+            .title {
+                font-size: 2.5rem;
+            }
+            .block {
+                height: 1.2rem;
+                width: 8rem;
+            }
+        }
+
+        .languages {
+            max-width: 100%;
+        }
     }
 }

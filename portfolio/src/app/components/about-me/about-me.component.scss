@@ -107,3 +107,34 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+
+    .image-part,
+    .description {
+      max-width: 100%;
+    }
+
+    .image-part {
+      padding: 0;
+      margin-bottom: 2rem;
+
+      .image {
+        padding-left: 0;
+        width: 80%;
+      }
+    }
+
+    .description {
+      padding: 1rem;
+
+      .info-section,
+      .contact {
+        width: 100%;
+      }
+    }
+  }
+  
+}

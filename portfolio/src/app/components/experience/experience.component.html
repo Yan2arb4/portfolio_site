@@ -1,0 +1,55 @@
+<section class="experiences" id="experiences">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let job of experiences; let last = last">
+
+      <!-- Spine -->
+      <div class="spine">
+        <div class="dot"></div>
+        <div class="line" *ngIf="!last"></div>
+      </div>
+
+      <!-- Card -->
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-text">
+            <span class="date-range">{{ job.from }} — {{ job.to }}</span>
+            <h3 class="role">{{ job.role }}</h3>
+            <p class="company">{{ job.company }} &nbsp;·&nbsp; {{ job.location }}</p>
+          </div>
+
+          <!-- Logo: swap div for <img> when ready -->
+          <div class="company-logo">
+            <img *ngIf="job.logo" [src]="job.logo" [alt]="job.company + ' logo'" />
+            <span *ngIf="!job.logo" class="logo-placeholder">{{ job.company[0] }}</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li *ngFor="let point of job.bullets">{{ point }}</li>
+        </ul>
+
+        <div class="tech-tags">
+          <span
+            class="tag"
+            *ngFor="let skill of job.stack"
+            [style.color]="skill.color"
+            [style.border-color]="skill.color"
+            [style.background-color]="skill.color + '15'">
+            {{ skill.name }}
+          </span>
+        </div>
+
+        <div class="team-photo" *ngIf="job.photo || job.showPhotoPlaceholder">
+          <img *ngIf="job.photo" [src]="job.photo" [alt]="job.company + ' team'" />
+          <div class="photo-placeholder" *ngIf="!job.photo">
+            <span class="placeholder-icon">Photo</span>
+            <span class="placeholder-label">// team photo coming soon</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

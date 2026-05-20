@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { projectCard } from 'src/app/models/projectCard';
 
 @Component({
@@ -7,9 +7,6 @@ import { projectCard } from 'src/app/models/projectCard';
   styleUrls: ['./project-card.component.scss']
 })
 export class ProjectCardComponent {
-@Input() project!: projectCard;
-
-  checkProject(): void {
-    window.open(this.project.githubLink, "_blank");
-  }
+  @Input() project!: projectCard;
+  @Output() cardClick = new EventEmitter<projectCard>();
 }
