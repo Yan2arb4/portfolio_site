@@ -1,11 +1,11 @@
-import { language } from "./language";
+import { tech } from "./tech";
 
 export class projectCard {
   title: string;
   type: string;
   ongoing: boolean;
   description: string;
-  skills: language[];
+  skills: tech[];
   githubLink: string;
   imageLink: string | null = null;
 
@@ -13,7 +13,7 @@ export class projectCard {
             type: string, 
             ongoing: boolean, 
             description: string, 
-            skills: language[], 
+            skills: tech[], 
             githubLink: string, 
             imageLink: string | null = null) {
     this.title = title;

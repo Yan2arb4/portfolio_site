@@ -1,4 +1,4 @@
-import { language } from "./language";
+import { tech } from "./tech";
 
 export class experience {
   role: string;
@@ -7,7 +7,7 @@ export class experience {
   from: string;
   to: string;
   bullets: string[];
-  stack: language[];
+  stack: tech[];
   logo: string | null;
   photo: string | null;             // team/internship photo
   showPhotoPlaceholder: boolean;    // true = show placeholder until photo is ready
@@ -18,7 +18,7 @@ export class experience {
             from: string,
             to: string,
             bullets: string[],
-            stack: language[],
+            stack: tech[],
             logo: string | null,
             photo: string | null,
             showPhotoPlaceholder: boolean) {

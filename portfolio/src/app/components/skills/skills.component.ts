@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { language, languagesSetList } from 'src/app/models/language';
+import { tech, techSetList } from 'src/app/models/tech';
 
 @Component({
   selector: 'app-skills',
@@ -7,9 +7,5 @@ import { language, languagesSetList } from 'src/app/models/language';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  languages : language[] = languagesSetList;
+  languages : tech[] = techSetList;
 }
-
-/* use image tag for figma since multiple colors
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
- */         
