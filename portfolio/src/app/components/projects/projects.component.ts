@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { getLanguagesByNames, language } from 'src/app/models/language';
 import { projectCard } from 'src/app/models/projectCard';
 
@@ -10,28 +10,41 @@ import { projectCard } from 'src/app/models/projectCard';
 export class ProjectsComponent {
   projects: projectCard[] = [
     new projectCard(
-      'Important Dog',
+      'PoroBot',
+      'Console App',
       true,
       'A discord bot made with Javascript that is self-hosted on a personal server running on Ubuntu. The discord bot provides many functionalities such as various commands calling APIs, sleep tracking with the utilization of MongoDB to handle the data. Utilizing MySQL, it also holds basic information of each member who interacts with it, allowing custom services such as minecraft server management and the ability to set reminders or recurring events to the individual in question.',
       getLanguagesByNames(['JavaScript', 'MySQL', 'MongoDB', 'Bash', 'Ubuntu']),
       '',
-      'assets/images/project_bot.png'
+      'assets/images/important_dog.jpg'
     ),
     new projectCard(
-      'Super Cartes Infinies',
+      'PoroHost',
+      'Full-Stack Website App',
       false,
-      'A digital card game inspired by Hearthstone, built with Angular (client) and ASP.NET Core with SQL Server (backend). Features include strategic gameplay, deck building, a currency system, Elo ranking, and more fun things! Real-time functionality is powered by SignalR over WebSockets. Developed in a team of four using Scrum methodology and managed with Azure DevOps',
-      getLanguagesByNames(['AngularJS', 'TypeScript', 'Asp.Net Core', 'C#', 'Entity Framework', 'SQL Server', 'Azure DevOps']),
-      'https://github.com/Yaneric-Roussy/SCI_Serveur',
-      'assets/images/project_cards.png'
+      'A full-stack game server management platform built with React and ASP.NET Core (C#), using Entity Framework and MySQL for backend services. The objective of the project is to host and manage containerized Minecraft servers on Linux using Docker with real-time server management.',
+      getLanguagesByNames(['Asp.Net Core', 'Entity Framework', 'C#', 'mysql', 'React', 'HTML5', 'SCSS','Docker', 'Azure DevOps']),
+      '',
+      'assets/images/porohost_logo.png'
     ),
     new projectCard(
-      'Portfolio Website',
+      'W65C02 Processor',
+      'Hardware',
       true,
-      'A personal portfolio website built with AngularTS and self-hosted on a personal domain, featuring reusable child components, structured models, and UI libraries for a clean and interactive user experience.',
-      getLanguagesByNames(['AngularJS', 'TypeScript', 'HTML5', 'SCSS', 'Ubuntu']),
-      'https://github.com/Yan2arb4/portfolio_site',
-      'assets/images/project_portfolio.png'
+      'This projects serves me as exploring the fundamental concepts behind computer architecture through hands-on experimentation with low-level hardware and software. Using the famous 65C02 microprocessor. The project focuses on understanding how a computer operates at a basic level, that implies memory mapping, data transfer, clocking, and assembly programming.',
+      getLanguagesByNames(['W65C02 Microprocessor', '6502 assembly', 'Electronics']),
+      '',
+      'assets/images/hardware.jpg'
     )
   ]
+
+  selectedProject: projectCard | null = null;
+
+  onCardClick(project: projectCard) {
+    this.selectedProject = project;
+  }
+
+  closeModal() {
+    this.selectedProject = null
+  }
 }

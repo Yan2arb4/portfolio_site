@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 $off-dark: #262626;
 $off-super-dark: #141313;
+$light-gray:#817a7a;
 $white: #ffffff;
 $cmd-blue: #3B78FF;
 $yummy-purple: #6E1E9D;
@@ -14,7 +14,6 @@ $cmd-green: #16C60C;
 
 * {
   margin: 0px;
-
   scrollbar-width: thin;
   scrollbar-color: $yummy-dark-purple $off-super-dark;
 }
