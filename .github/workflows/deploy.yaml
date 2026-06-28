@@ -15,7 +15,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Install dependencies
         working-directory: portfolio
@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.DEPLOY_PASSWORD }}
           port: 2222
           script: |
-            rm -rf /opt/docker/sitesyaneric.porogoramer.com/*
+            rm -rf /opt/docker/sites/yaneric.porogoramer.com/*
 
       - name: Deploy via SCP
         uses: appleboy/scp-action@v1
