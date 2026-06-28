@@ -10,13 +10,13 @@ import { projectCard } from 'src/app/models/projectCard';
 export class ProjectsComponent {
   projects: projectCard[] = [
     new projectCard(
-      'PoroBot',
-      'Console App',
+      'HomeLab',
+      'Infrastructure',
       true,
-      'A discord bot made with Javascript that is self-hosted on a personal server running on Ubuntu. The discord bot provides many functionalities such as various commands calling APIs, sleep tracking with the utilization of MongoDB to handle the data. Utilizing MySQL, it also holds basic information of each member who interacts with it, allowing custom services such as minecraft server management and the ability to set reminders or recurring events to the individual in question.',
-      getTechByNames(['JavaScript', 'MySQL', 'MongoDB', 'Bash', 'Ubuntu', 'Github']),
+      'The Homelab frame server is currently being assembled. The logic is built around a Raspberry Pi 4 edge node and two x86 compute servers housed in a custom 10-inch rack, this homelab serves as my personal infrastructure playground. The Pi handles ingress routing and internal DNS, while the compute nodes run Docker workloads ranging from self-hosted websites and APIs to a NAS, media server, and local AI. Optical drives, hot-swap HDDs, and a full networking stack round out the physical build. On the software side, it gives me a real environment to experiment with Infrastructure-as-Code, while hosting all my personal projects under one roof.',
+      getTechByNames(['Raspberry Pi', 'Docker', 'Traefik', 'Cloudflare', 'Ubuntu', 'Bash','GitHub']),
       '',
-      'assets/images/important_dog.jpg'
+      'assets/images/homelab_picture.jpg'
     ),
     new projectCard(
       'PoroHost',
@@ -28,6 +28,15 @@ export class ProjectsComponent {
       'assets/images/porohost_logo.png'
     ),
     new projectCard(
+      'PoroBot',
+      'Console App',
+      true,
+      'A discord bot made with Javascript that is self-hosted on a personal server running on Ubuntu. The discord bot provides many functionalities such as various commands calling APIs, sleep tracking with the utilization of MongoDB to handle the data. Utilizing MySQL, it also holds basic information of each member who interacts with it, allowing custom services such as minecraft server management and the ability to set reminders or recurring events to the individual in question.',
+      getTechByNames(['JavaScript', 'MySQL', 'MongoDB', 'Bash', 'Ubuntu', 'Github']),
+      '',
+      'assets/images/important_dog.jpg'
+    ),
+    new projectCard(
       'W65C02 Processor',
       'Hardware',
       true,
@@ -35,7 +44,7 @@ export class ProjectsComponent {
       getTechByNames(['W65C02 Microprocessor', '6502 assembly', 'Electronics']),
       '',
       'assets/images/hardware.jpg'
-    )
+    ),
   ]
 
   selectedProject: projectCard | null = null;
