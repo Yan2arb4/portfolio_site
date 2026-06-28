@@ -19,6 +19,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: portfolio
+        run: npm ci
         
       - name: Use Node.js 
         uses: actions/setup-node@v3
