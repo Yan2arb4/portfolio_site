@@ -47,6 +47,18 @@ export const techSetList: tech[] = [
   new tech('devicon-git-plain colored', '#e42a09', 'GitHub', true, techType.TOOL),
 
   new tech('does-not-exist', '#6DB33F', 'Scrum Methodology', false, techType.CONCEPT),
+
+  new tech('devicon-raspberrypi-plain colored', '#C51A4A', 'Raspberry Pi', false, techType.TOOL),
+  new tech('devicon-nginx-plain colored', '#009900', 'Nginx', false, techType.TOOL),
+  new tech('devicon-prometheus-plain colored', '#E6522C', 'Prometheus', false, techType.TOOL),
+  new tech('devicon-grafana-plain colored', '#F46800', 'Grafana', false, techType.TOOL),
+  new tech('does-not-exist', '#24A1C1', 'Traefik', false, techType.TOOL),
+  new tech('does-not-exist', '#F00', 'Pi-hole', false, techType.TOOL),
+  new tech('does-not-exist', '#0078d4', 'Cloudflare', false, techType.TOOL),
+  new tech('does-not-exist', '#2B6CB0', 'Portainer', false, techType.TOOL),
+  new tech('does-not-exist', '#EF5C00', 'TrueNAS', false, techType.TOOL),
+  new tech('does-not-exist', '#00B4D8', 'Jellyfin', false, techType.TOOL),
+  new tech('does-not-exist', '#4CAF50', 'Immich', false, techType.TOOL),
 ];
 
 export function getTechByNames(names: string[]): tech[] {
