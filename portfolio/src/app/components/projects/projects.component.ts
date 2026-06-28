@@ -21,7 +21,7 @@ export class ProjectsComponent {
     new projectCard(
       'PoroHost',
       'Full-Stack Website App',
-      false,
+      true,
       'A full-stack game server management platform built with React and ASP.NET Core (C#), using Entity Framework and MySQL for backend services. The objective of the project is to host and manage containerized Minecraft servers on Linux using Docker with real-time server management.',
       getTechByNames(['Asp.Net Core', 'Entity Framework', 'C#', 'mysql', 'React', 'HTML5', 'SCSS','Docker', 'Azure DevOps', 'Github']),
       '',
