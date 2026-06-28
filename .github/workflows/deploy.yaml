@@ -42,7 +42,7 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           port: 2222
           script: |
-            rm -rf /var/www/yaneric.porogoramer.com/*
+            rm -rf /opt/docker/sites/yaneric.porogoramer.com/*
 
       - name: Deploy via SSH 
         uses: appleboy/scp-action@v1
@@ -52,5 +52,5 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           port: 2222
           source: "dist/*"
-          target: "/var/www/yaneric.porogoramer.com"
+          target: "opt/docker/sites/yaneric.porogoramer.com"
           overwrite: true
