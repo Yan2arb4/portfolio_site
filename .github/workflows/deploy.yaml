@@ -46,7 +46,7 @@ jobs:
           password: ${{ secrets.DEPLOY_PASSWORD }}
           port: 2222
           script: |
-            rm -rf /opt/docker/traefik-from-scratch/sites/yaneric.porogoramer.com/dist/
+            rm -rf /opt/docker/traefik-from-scratch/sites/yaneric.porogoramer.com/*
 
       - name: Deploy via SCP
         uses: appleboy/scp-action@v1
