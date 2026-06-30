@@ -46,7 +46,8 @@ jobs:
           password: ${{ secrets.DEPLOY_PASSWORD }}
           port: 2222
           script: |
-            rm -rf /opt/docker/traefik-from-scratch/sites/yaneric.porogoramer.com/dist/
+            mkdir -p /opt/docker/traefik-from-scratch/sites/yaneric.porogoramer.com/dist
+            find /opt/docker/traefik-from-scratch/sites/yaneric.porogoramer.com/dist -mindepth 1 -delete
 
       - name: Deploy via SCP
         uses: appleboy/scp-action@v1
@@ -56,5 +57,5 @@ jobs:
           password: ${{ secrets.DEPLOY_PASSWORD }}
           port: 2222
           source: "dist/*"
-          target: "/opt/docker/traefik-from-scratch/sites/yaneric.porogoramer.com"
+          target: "/opt/docker/traefik-from-scratch/sites/yaneric.porogoramer.com/dist"
           overwrite: true
