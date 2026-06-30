@@ -11,7 +11,7 @@ export class SkillsComponent {
   techTypes = Object.values(techType);
 
   getTechByType(type: techType): tech[] {
-    return techSetList.filter(t => t.type === type);
+    return techSetList.filter(t => t.type === type && t.show);
   }
 
   formatTechType(type: string): string {
